@@ -78,16 +78,23 @@ So, expect that there may be possible changes in the future.
 
 ## Installing
 
-You can use the following process to install **Timeconverter** using **Go**'s install functionality:
-```
-go install github.com/hobysmith/timeconverter@latest
-```
+***** _**Note**: I intend to provide more installation options.  For now, the following options are available._
 
-If you want to cross-compile a build for one of the supported platforms, do the following:
-1. First, clone this repo to your local environment.
-2. Then, to build a runtime for the current platform, just run `make`.
+### Installing from pre-compiled release binaries
+You can download a pre-compiled binary or zip from 
+the [releases](https://github.com/hobysmith/timeconverter/releases) page.
+There are binaries for BSD, Mac, Linux and Windows. Both binaries and archives of the binaries
+are available there.
 
-Or, to build a runtime for a supported platform, run `make [target]`. The supported targets are:
+### Installing from the local git repo
+Clone the repo.  From the root path of the repo, simply run `go install`.
+
+### Building a binary for local environment or cross-compiling a build using **make**
+If you want to build a binary for the local environment:
+1. Clone this repo to your local environment.
+2. From the local repo root path, just run `make`.
+
+Or, to cross-compile a build for a supported platform, run `make [target]`. The supported targets are:
 - mac-arm64
 - mac-amd64
 - win-arm64
