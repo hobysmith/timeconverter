@@ -86,6 +86,11 @@ the [releases](https://github.com/hobysmith/timeconverter/releases) page.
 There are binaries for BSD, Mac, Linux and Windows. Both binaries and archives of the binaries
 are available there.
 
+### Installing remotely from GitHub repo
+You use this to install the latest version directly from the repo:
+
+        go install github.com/hobysmith/timeconverter@latest
+
 ### Installing from the local git repo
 Clone the repo.  From the root path of the repo, simply run `go install`.
 
