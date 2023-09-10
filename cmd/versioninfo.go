@@ -15,7 +15,7 @@ var (
 	AppName         = "Timeconverter - A time conversion utility"
 	AppMajorVersion = "0"
 	AppMinorVersion = "1"
-	AppPatchVersion = "0"
+	AppPatchVersion = "2"
 
 	// For any pre-release version, if would need to provide leading ".", like ".dev01"
 	AppPreReleaseVer  = ""
