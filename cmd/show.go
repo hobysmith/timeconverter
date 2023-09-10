@@ -116,7 +116,7 @@ Note: Time Format names are NOT case sensitive.
   UnixMicro          Unix Time in microseconds
   UnixNano           Unix Time in nanoseconds
   Custom             Provide layout text using the flags "--output-layout" and "input-layout" in Timeconverter's formatting syntax
-  CustomGO           Provide layout text using the flags "--output-layout" and "input-layout" in golang's fmt formatting syntax
+  CustomGO           Provide layout text using the flags "--output-layout" and "input-layout" in Go's fmt formatting syntax
                      See https://pkg.go.dev/time#pkg-constants
 `)
 }

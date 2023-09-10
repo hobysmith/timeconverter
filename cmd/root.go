@@ -128,16 +128,16 @@ func init() {
   timeconverter show --time-formats
   timeconverter show --custom-entities`
 
-	cmd.Flags().StringVarP(&helpers.CmdHelpers.OutputTargetName, "output-target", "t", "", "Indicates the type of output. Either console or clipboard.  If omitted, the default is console.")
-	cmd.Flags().StringVarP(&helpers.CmdHelpers.InputFormatName, "input-format", "i", "USDateTimeZ", "The type of input. Use \"timeconverter show -time-formats\" for a list of allowed time formats.  Default is USDateTimeZ.")
+	cmd.Flags().StringVarP(&helpers.CmdHelpers.OutputTargetName, "output-target", "t", "console", "Indicates the type of output. Either console or clipboard.")
+	cmd.Flags().StringVarP(&helpers.CmdHelpers.InputFormatName, "input-format", "i", "USDateTimeZ", "The input format. Use \"timeconverter show -f\" for a list of formats.")
 	cmd.Flags().StringVarP(&helpers.CmdHelpers.InputLayout, "input-layout", "l", "", "When input format is set to \"custom\" or \"customgo\", this is the layout text.")
-	cmd.Flags().StringVarP(&helpers.CmdHelpers.OutputFormatName, "output-format", "o", "USDateTimeZ", "The desired output format.  Use \"timeconverter show -time-formats\" for a list of allowed formats.  Default is USDateTimeZ.")
+	cmd.Flags().StringVarP(&helpers.CmdHelpers.OutputFormatName, "output-format", "o", "USDateTimeZ", "The output format.  Use \"timeconverter show -f\" for a list of formats.")
 	cmd.Flags().StringVarP(&helpers.CmdHelpers.OutputLayout, "output-layout", "r", "", "When output format is \"custom\" or \"customgo\", this is the layout text.")
-	cmd.Flags().BoolVarP(&helpers.CmdHelpers.OutputValueOnly, "output-value-only", "v", false, "If true, only the value will be sent to the output, with the possible exception of critical errors.  Default is false.")
-	cmd.Flags().BoolVarP(&helpers.CmdHelpers.PipeMode, "piped", "p", false, "timeconverter detects piped input automatically, but IF that is not working for some reason, then this flag explicitly indicates that you are piping input in from another app. When true, input is read from stdin. By default, only the decoded value is printed to output, to support piping the timeconverter output to another app. That can be changed via flags.")
-	cmd.Flags().BoolVarP(&helpers.CmdHelpers.SetGlobalDefault, "set-global-default", "", false, "When provided, a global config will be created, or updated if it already exists.")
-	cmd.Flags().BoolVarP(&helpers.CmdHelpers.SetDefault, "set-default", "", false, "When provided, a local default config will be created.  The local config will override global configs when both are set.")
-	cmd.Flags().StringVarP(&helpers.CmdHelpers.OutputTimeZone, "output-timezone", "z", "", "A timezone to use when converting the output time.  If not specified, the local time will be used for the output time. Can be a country/city ref from IANA TZ database or a timezone offset like -0700, +0000 or +0300")
+	cmd.Flags().BoolVarP(&helpers.CmdHelpers.OutputValueOnly, "output-value-only", "v", false, "If true, only the converted value or critical errors will be sent to the output.")
+	cmd.Flags().BoolVarP(&helpers.CmdHelpers.PipeMode, "piped", "p", false, "[OPTIONAL] Explicitly indicates that you are piping input in from another app if auto-detection is not working.")
+	cmd.Flags().BoolVarP(&helpers.CmdHelpers.SetGlobalDefault, "set-global-default", "", false, "Global defaults will be created or updated from provided flags.")
+	cmd.Flags().BoolVarP(&helpers.CmdHelpers.SetDefault, "set-default", "", false, "Local defaults will be created or updated from provided flags.")
+	cmd.Flags().StringVarP(&helpers.CmdHelpers.OutputTimeZone, "output-timezone", "z", "", "A timezone to use when converting the output time.  If not specified, the local time will be used for the output time. Can be an IANA country/city ref or a timezone offset like -0700")
 
 	errInInit = helpers.LoadOutputPrinter()
 	if errInInit != nil {

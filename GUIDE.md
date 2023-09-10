@@ -40,9 +40,9 @@
       * [3.4.3 Formats](#343-formats)
   * [4. Building Timeconverter](#4-building-timeconverter)
     * [4.1 all](#41-all)
-    * [4.2 bsd](#42-bsd)
     * [4.3 build](#43-build)
     * [4.4 clean](#44-clean)
+    * [4.5 install](#45-install)
     * [4.5 linux-amd64](#45-linux-amd64)
     * [4.6 linux-arm64](#46-linux-arm64)
     * [4.7 list](#47-list)
@@ -506,10 +506,6 @@ The ***makefile*** targets are described in the following sections.
 ### 4.1 all
 `make all` will build all 8 targets.
 
-### 4.2 bsd
-`make bsd` will build a BSD target. BSD builds only support AMD64 architecture, so there are not AMD vs. ARM 
-target variants.
-
 ### 4.3 build
 `make build` will build the project using the current platform settings.  The file will be named "timeconverter".
 
@@ -519,6 +515,10 @@ to `make build`.
 ### 4.4 clean
 `make clear` will clear all **Go** artifacts using `go clean`, then it will remove all of the 8 build targets,
 if they exist.
+
+### 4.5 install
+`make install` will build and install the Timeconverter binary locally using the **Go** install functionality.
+After running this, Timeconverter should be available from any path on your system for the logged-in user.
 
 ### 4.5 linux-amd64
 `make linux-amd64` will build an AMD64 target for Linux.

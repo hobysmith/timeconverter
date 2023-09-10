@@ -83,7 +83,7 @@ So, expect that there may be possible changes in the future.
 ### Installing from pre-compiled release binaries
 You can download a pre-compiled binary or zip from 
 the [releases](https://github.com/hobysmith/timeconverter/releases) page.
-There are binaries for BSD, Mac, Linux and Windows. Both binaries and archives of the binaries
+There are binaries for Mac, Linux and Windows. Both binaries and archives of the binaries
 are available there.
 
 ### Installing remotely from GitHub repo
@@ -92,7 +92,8 @@ You use this to install the latest version directly from the repo:
         go install github.com/hobysmith/timeconverter@latest
 
 ### Installing from the local git repo
-Clone the repo.  From the root path of the repo, simply run `go install`.
+Clone the repo.  From the root path of the repo, simply run `make install`. If you do
+not have the `make` system installed, you can run `go install`.
 
 ### Building a binary for local environment or cross-compiling a build using **make**
 If you want to build a binary for the local environment:
@@ -106,7 +107,6 @@ Or, to cross-compile a build for a supported platform, run `make [target]`. The 
 - win-amd64
 - linux-arm64
 - linux-amd64
-- bsd
 
 For example, to build a runtime for Linux on ARM64, run:
 
