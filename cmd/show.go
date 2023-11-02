@@ -95,7 +95,6 @@ Note: Time Format names are NOT case sensitive.
   StampMicro         "Jan _2 15:04:05.000000"
   StampNano          "Jan _2 15:04:05.000000000"
   USDateTime         "2006-01-02 15:04:05"
-  USDateTime         "2006-01-02 15:04:05"
   USDateTimeZ        "2006-01-02 15:04:05 -0700"
   USDateTimeMilliZ   "2006-01-02 15:04:05.000 -0700"
   USDateTimeMicroZ   "2006-01-02 15:04:05.000000 -0700"
